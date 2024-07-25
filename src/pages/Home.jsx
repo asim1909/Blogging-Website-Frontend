@@ -31,7 +31,7 @@ function Home() {
     <div className="home-page">
       <div className="banner">
         <div className="container">
-          <h1 className="logo-font">Blogco</h1>
+          <h1 className="logo-font">Blogging</h1>
           <p>A place to share your knowledge.</p>
         </div>
       </div>
@@ -45,23 +45,28 @@ function Home() {
                     <button
                       onClick={onFeedClick}
                       type="button"
-                      className={classNames('nav-link', { active: filters.feed })}
+                      className={classNames('nav-link', {
+                        active: filters.feed,
+                      })}
                     >
                       Your Feed
                     </button>
                   </li>
                 )}
+            
+      
               </ul>
             </div>
-            <ArticleList />
+            <ArticleList  />
           </div>
-          <div className="col-md-3">
+          <div className='col-md-3'>
             <PopularTags />
           </div>
+          
         </div>
       </div>
     </div>
-  );  
+  )
 }
 
 export default Home
